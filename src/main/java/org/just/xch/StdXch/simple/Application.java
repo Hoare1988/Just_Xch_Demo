@@ -16,6 +16,10 @@
 
 package org.just.xch.StdXch.simple;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import org.just.xch.StdXch.simple.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,12 +27,10 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import org.just.xch.StdXch.simple.service.HelloWorldService;
-
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-public class SampleSimpleApplication implements CommandLineRunner {
+public class Application implements CommandLineRunner {
 
 
 	@Autowired
@@ -40,6 +42,13 @@ public class SampleSimpleApplication implements CommandLineRunner {
 	}
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(SampleSimpleApplication.class, args);
+		 SpringApplication app = new SpringApplication(Application.class); 
+		 app.setWebEnvironment(true);  
+	        app.setShowBanner(false);  
+	          
+	        Set<Object> set = new HashSet<Object>();  
+	        set.add("classpath:applicationContext.xml");  
+	        app.setSources(set);  
+	        app.run(args);
 	}
 }

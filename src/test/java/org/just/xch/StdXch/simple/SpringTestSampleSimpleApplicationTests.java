@@ -22,12 +22,12 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * Tests for {@link SampleSimpleApplication}.
+ * Tests for {@link Application}.
  * 
  * @author Dave Syer
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = SampleSimpleApplication.class)
+@SpringApplicationConfiguration(classes = Application.class)
 public class SpringTestSampleSimpleApplicationTests {
 
 	@Test
