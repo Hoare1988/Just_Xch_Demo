@@ -13,13 +13,30 @@ public class TestCorsor {
 
 	public static void main(String[] args) {
 		
-		BlockingQueue<Map<String,Object>> queue=new LinkedBlockingQueue<Map<String,Object>> ();
-		ClinicalDataFactory factory=new ClinicalDataFactory(queue);
-		ClinicalDataGetFact getfactory=new ClinicalDataGetFact(queue);
-		factory.start();
-		getfactory.start();
+//		BlockingQueue<Map<String,Object>> queue=new LinkedBlockingQueue<Map<String,Object>> ();
+//		ClinicalDataFactory factory=new ClinicalDataFactory(queue);
+//		ClinicalDataGetFact getfactory=new ClinicalDataGetFact(queue);
+//		factory.start();
+//		getfactory.start();
+		
+		testZero(Double.MIN_VALUE);
+		testZero(Double.MAX_VALUE);
 		
 	}
+	
+	public static void testZero(double v2){
+		if(v2==0){
+			System.out.println(true);
+			System.out.println(v2);
+		}else{
+			System.out.println(false);
+			System.out.println(v2);
+		}
+		
+	}
+	
+	
+	
 	
 	/**
 	 * 
