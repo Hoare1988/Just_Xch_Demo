@@ -8,10 +8,29 @@
           http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd  
           http://www.springframework.org/schema/beans  
           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+           
+           
+    <context:annotation-config />  
+    <context:component-scan base-package="org.just.*.mongo">  
+        <context:exclude-filter type="annotation"  
+            expression="org.springframework.context.annotation.Configuration" />  
+    </context:component-scan>  
+    <context:annotation-config />  
   
-    <mongo:mongo host="${mongo.host}" port="${mongo.port}">  
-        <!-- 连接池配置详细查看http://api.mongodb.org/java/2.7.2/com/mongodb/MongoOptions.html#connectionsPerHost   
+    <mongo:repositories base-package="org.just.xch.StdXch.mongo.dao" />  
+    <context:component-scan base-package="org.just.xch.StdXch.mongo.service" />  
+          
+    <!-- 获取配置文件属性 -->  
+    <bean id="placeholderConfig"  
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+        <property name="location">  
+            <value>classpath:db.properties</value>  
+        </property>  
+    </bean>  
+          
+   <!-- 连接池配置详细查看http://api.mongodb.org/java/2.7.2/com/mongodb/MongoOptions.html#connectionsPerHost   
             或者http://www.cnblogs.com/huangfox/archive/2012/04/01/2428947.html -->  
+    <mongo:mongo host="${mongo.host}" port="${mongo.port}">  
         <mongo:options connections-per-host="${mongo.connectionsPerHost}"  
             threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"  
             connect-timeout="${mongo.connectTimeout}" max-wait-time="${mongo.maxWaitTime}"  
@@ -48,14 +67,4 @@
         </constructor-arg>  
     </bean>  
   
-    <context:annotation-config />  
-    <context:component-scan base-package="com.cl.*.mongo">  
-        <context:exclude-filter type="annotation"  
-            expression="org.springframework.context.annotation.Configuration" />  
-    </context:component-scan>  
-    <context:annotation-config />  
-  
-    <mongo:repositories base-package="com.cl.*.mongo.*.dao" />  
-  
-    <context:component-scan base-package="com.cl.*.mongo.service" />  
 </beans> 
