@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.just.xch.StdXch.simple;
+package org.just.xch.stdxch.simple;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.just.xch.StdXch.simple.service.HelloWorldService;
+import org.just.xch.stdxch.simple.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

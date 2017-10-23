@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.mongo.dao;
+package org.just.xch.stdxch.mongo.dao;
 
 import java.util.List;
 

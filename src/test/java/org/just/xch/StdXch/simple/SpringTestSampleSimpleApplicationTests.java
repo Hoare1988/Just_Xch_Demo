@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.just.xch.StdXch.simple;
+package org.just.xch.stdxch.simple;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.just.xch.StdXch.mongo.Application;
+import org.just.xch.stdxch.mongo.Application;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 

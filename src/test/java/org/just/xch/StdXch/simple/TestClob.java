@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.simple;
+package org.just.xch.stdxch.simple;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.Clob;
@@ -44,13 +44,13 @@ public class TestClob {
 		sortFields.add("c");
 		sortFields.add("d");
 		
-		Map<String, String> o1 =new HashMap<String, String>();
+		Map<String, String> o1 =new HashMap<String, String>(10);
 		o1.put("a", "ab");
 		o1.put("b", "ab");
 		o1.put("c", "ab");
 		o1.put("d", "ab");
 		
-		Map<String, String> o2=new HashMap<String, String>();
+		Map<String, String> o2=new HashMap<String, String>(10);
 		
 		o2.put("a", "ab");
 		//o2.put("b", "ab");

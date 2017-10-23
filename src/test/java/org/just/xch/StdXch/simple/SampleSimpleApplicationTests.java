@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.just.xch.StdXch.simple;
+package org.just.xch.stdxch.simple;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.just.xch.StdXch.mongo.Application;
+import org.just.xch.stdxch.mongo.Application;
 import org.springframework.boot.test.OutputCapture;
 
 import static org.junit.Assert.assertTrue;

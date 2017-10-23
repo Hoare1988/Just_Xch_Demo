@@ -17,8 +17,8 @@
     </context:component-scan>  
     <context:annotation-config />  
   
-    <mongo:repositories base-package="org.just.xch.StdXch.mongo.dao" />  
-    <context:component-scan base-package="org.just.xch.StdXch.mongo.service" />  
+    <mongo:repositories base-package="org.just.xch.stdxch.mongo.dao" />  
+    <context:component-scan base-package="org.just.xch.stdxch.mongo.service" />  
           
     <!-- 获取配置文件属性 -->  
     <bean id="placeholderConfig"  

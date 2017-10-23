@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.mongo.entity;
+package org.just.xch.stdxch.mongo.entity;
 
 import java.io.Serializable;
 

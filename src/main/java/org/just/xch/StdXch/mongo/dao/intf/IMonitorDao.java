@@ -1,8 +1,8 @@
-package org.just.xch.StdXch.mongo.dao.intf;
+package org.just.xch.stdxch.mongo.dao.intf;
 
 import java.util.List;
 
-import org.just.xch.StdXch.mongo.entity.ShAj;
+import org.just.xch.stdxch.mongo.entity.ShAj;
 
 public interface IMonitorDao {
 

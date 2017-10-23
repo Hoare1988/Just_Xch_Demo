@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.just.xch.StdXch.mongo;
+package org.just.xch.stdxch.mongo;
 
 import java.util.HashSet;
 import java.util.Set;

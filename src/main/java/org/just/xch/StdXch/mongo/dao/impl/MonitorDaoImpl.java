@@ -1,11 +1,11 @@
-package org.just.xch.StdXch.mongo.dao.impl;
+package org.just.xch.stdxch.mongo.dao.impl;
 
 import java.util.List;
 
-import org.just.xch.StdXch.mongo.constant.Constant;
-import org.just.xch.StdXch.mongo.dao.MongodbBaseDao;
-import org.just.xch.StdXch.mongo.dao.intf.IMonitorDao;
-import org.just.xch.StdXch.mongo.entity.ShAj;
+import org.just.xch.stdxch.mongo.constant.Constant;
+import org.just.xch.stdxch.mongo.dao.MongodbBaseDao;
+import org.just.xch.stdxch.mongo.dao.intf.IMonitorDao;
+import org.just.xch.stdxch.mongo.entity.ShAj;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -30,7 +30,7 @@ public class MonitorDaoImpl extends MongodbBaseDao<ShAj> implements IMonitorDao 
 
 	/** 
 	 * @param ghdjid
-	 * @see org.just.xch.StdXch.mongo.dao.intf.IMonitorDao#findByGhdjID(java.lang.String)
+	 * @see org.just.xch.stdxch.mongo.dao.intf.IMonitorDao#findByGhdjID(java.lang.String)
 	 * @时间: 2017年9月10日 下午4:50:00 
 	 * @author: XuChuanHou
 	*/
@@ -42,7 +42,7 @@ public class MonitorDaoImpl extends MongodbBaseDao<ShAj> implements IMonitorDao 
 
 	/** 
 	 * @param ghdjid
-	 * @see org.just.xch.StdXch.mongo.dao.intf.IMonitorDao#deleteByGhdjID(java.lang.String)
+	 * @see org.just.xch.stdxch.mongo.dao.intf.IMonitorDao#deleteByGhdjID(java.lang.String)
 	 * @时间: 2017年9月10日 下午4:53:26 
 	 * @author: XuChuanHou
 	*/

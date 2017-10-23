@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.mongo.constant;
+package org.just.xch.stdxch.mongo.constant;
 
 public class Constant {
 	

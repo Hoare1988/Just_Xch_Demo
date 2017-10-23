@@ -1,14 +1,12 @@
-package org.just.xch.StdXch.thread.commut;
+package org.just.xch.stdxch.thread.commut;
 
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 
 /**
- * 
- * @author pcdalao
  *  管道流
+ *@author pcdalao
  */
-
 public class WriteData {
 	
 	public void writeDataFromPip(PipedOutputStream outputStream ){

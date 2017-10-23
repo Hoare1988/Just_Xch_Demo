@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.just.xch.StdXch.simple.service;
+package org.just.xch.stdxch.simple.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

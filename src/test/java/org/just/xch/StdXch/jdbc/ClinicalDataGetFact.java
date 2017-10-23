@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.jdbc;
+package org.just.xch.stdxch.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

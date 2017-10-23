@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.jdbc;
+package org.just.xch.stdxch.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -44,7 +44,7 @@ public class TestCorsor {
 	 * @throws SQLException
 	 * @author: XuChuanHou
 	 */
-	public static void testCursor_001() throws SQLException{
+	public static void testCursor001() throws SQLException{
 		long cur=System.currentTimeMillis();
 		PreparedStatement ps =null;
 		Connection connection =null;
@@ -89,7 +89,7 @@ public class TestCorsor {
 	 * @throws SQLException
 	 * @author: XuChuanHou
 	 */
-	public static void testCursor_002() throws SQLException{
+	public static void testCursor002() throws SQLException{
 		long cur=System.currentTimeMillis();
 		PreparedStatement ps =null;
 		Connection connection =null;

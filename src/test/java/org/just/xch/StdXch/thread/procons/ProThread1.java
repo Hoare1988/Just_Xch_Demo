@@ -1,7 +1,7 @@
-package org.just.xch.StdXch.thread.procons;
+package org.just.xch.stdxch.thread.procons;
 
 /**
- * Created by hoare on 2017/8/6.
+ * @author Administrator
  */
 public class ProThread1 extends  Thread {
 
@@ -12,6 +12,7 @@ public class ProThread1 extends  Thread {
         this.pro1=pro1;
     }
 
+    @Override
     public void run(){
         while(true){
             pro1.setValue();

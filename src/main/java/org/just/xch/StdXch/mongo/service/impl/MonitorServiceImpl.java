@@ -1,6 +1,6 @@
-package org.just.xch.StdXch.mongo.service.impl;
+package org.just.xch.stdxch.mongo.service.impl;
 
-import org.just.xch.StdXch.mongo.service.intf.IMonitorService;
+import org.just.xch.stdxch.mongo.service.intf.IMonitorService;
 import org.springframework.stereotype.Component;
 
 @Component

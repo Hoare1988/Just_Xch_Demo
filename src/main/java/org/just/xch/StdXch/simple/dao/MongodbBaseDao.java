@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.simple.dao;
+package org.just.xch.stdxch.simple.dao;
 
 import java.util.List;
 

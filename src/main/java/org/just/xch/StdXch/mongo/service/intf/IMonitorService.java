@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.mongo.service.intf;
+package org.just.xch.stdxch.mongo.service.intf;
 
 public interface IMonitorService {
 

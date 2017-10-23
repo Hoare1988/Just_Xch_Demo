@@ -1,7 +1,7 @@
-package org.just.xch.StdXch.thread.procons;
+package org.just.xch.stdxch.thread.procons;
 
 /**
- * Created by hoare on 2017/8/6.
+ * @author Administrator
  */
 public class Main1 {
 

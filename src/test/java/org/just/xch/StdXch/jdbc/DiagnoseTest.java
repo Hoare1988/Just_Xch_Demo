@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.jdbc;
+package org.just.xch.stdxch.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,7 +27,7 @@ public class DiagnoseTest {
 			rSet.setFetchDirection(ResultSet.FETCH_FORWARD);
 			rSet.setFetchSize(100000);
 			
-			Map<String, List<Map<String, Object>>> zdAllMap= new HashMap<String, List<Map<String,Object>>>();
+			Map<String, List<Map<String, Object>>> zdAllMap= new HashMap<String, List<Map<String,Object>>>(10);
 			
 			while(rSet.next()){
 				Map<String,Object> zd=new HashMap<String, Object>();

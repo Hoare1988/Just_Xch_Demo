@@ -1,4 +1,4 @@
-package org.just.xch.StdXch.jdbc;
+package org.just.xch.stdxch.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -45,7 +45,7 @@ public class ClinicalDataFactory extends Thread {
 				Object xmdm=rSet.getObject("xmdm");
 				ghdjid=(String)ghdjid+(String)xmdm;
 				
-				Map<String,Object> patient=new HashMap<String,Object>();
+				Map<String,Object> patient=new HashMap<String,Object>(20);
 				patient.put("id", id);
 				patient.put("ghdjid", ghdjid);
 				patient.put("xmdm", xmdm);

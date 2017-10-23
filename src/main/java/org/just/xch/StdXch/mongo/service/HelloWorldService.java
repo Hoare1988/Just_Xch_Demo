@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.just.xch.StdXch.mongo.service;
+package org.just.xch.stdxch.mongo.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
