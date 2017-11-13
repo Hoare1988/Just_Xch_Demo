@@ -16,14 +16,14 @@
 
 package org.just.xch.stdxch.simple;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.just.xch.stdxch.mongo.Application;
 import org.springframework.boot.test.OutputCapture;
-
-import static org.junit.Assert.assertTrue;
 
 /**
  * Tests for {@link Application}.

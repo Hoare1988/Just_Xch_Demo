@@ -1,6 +1,5 @@
 package org.just.xch.stdxch.thread.commut;
 
-import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 
 /**

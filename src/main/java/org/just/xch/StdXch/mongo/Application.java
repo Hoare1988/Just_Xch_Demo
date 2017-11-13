@@ -1,3 +1,4 @@
+package org.just.xch.stdxch.mongo;
 /*
  * Copyright 2012-2013 the original author or authors.
  *
@@ -14,30 +15,33 @@
  * limitations under the License.
  */
 
-package org.just.xch.stdxch.mongo;
+
 
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableAutoConfiguration
 @ComponentScan
-public class Application {
+@EnableAutoConfiguration
+public class Application implements CommandLineRunner {
 
-	public static void main(String[] args) throws Exception {
-		SpringApplication app = new SpringApplication(Application.class);
-		app.setWebEnvironment(true);
-		app.setShowBanner(false);
+    @Override
+    public void run(String... args) {
+        
+    }
 
-		Set<Object> set = new HashSet<Object>();
-		set.add("classpath:applicationContext.xml");
-		app.setSources(set);
-
-		app.run(args);
-	}
+    public static void main(String[] args) throws Exception {
+        SpringApplication app = new SpringApplication(Application.class);
+        
+        Set<Object> set = new HashSet<Object>();
+        set.add("classpath:applicationContext.xml");
+        app.setSources(set);
+        app.run(args);
+    }
 }
