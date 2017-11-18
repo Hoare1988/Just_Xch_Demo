@@ -1,9 +1,11 @@
 package org.just.xch.stdxch.mongo.entity;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "CK10_GHDJ")
+@Document(collection = "ck10_ghdj")
 public class Ghdj {
 
     @Field("_id")
@@ -43,6 +45,11 @@ public class Ghdj {
     private String cyzddm;
     @Field
     private String cyzdmc;
+    @Field
+    private List<Cfmx> cfmxs;
+    @Field
+    private List<Jsmx> jsmxs;
+    
 
     public Object get_id() {
         return _id;
@@ -180,4 +187,20 @@ public class Ghdj {
         this.cyzdmc = cyzdmc;
     }
 
+    public List<Cfmx> getCfmxs() {
+        return cfmxs;
+    }
+
+    public void setCfmxs(List<Cfmx> cfmxs) {
+        this.cfmxs = cfmxs;
+    }
+
+    public List<Jsmx> getJsmxs() {
+        return jsmxs;
+    }
+
+    public void setJsmxs(List<Jsmx> jsmxs) {
+        this.jsmxs = jsmxs;
+    }
+    
 }

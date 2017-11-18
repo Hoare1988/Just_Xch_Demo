@@ -7,6 +7,9 @@ import org.just.xch.stdxch.mongo.entity.Ghdj;
 
 public interface IMonitorService {
     
-    List<Ghdj> findByGhdjID(String id);
+    Ghdj findByGhdjID(String id);
     
+    List<Ghdj> findManGhdj();
+    
+    Ghdj saveGhdj(Ghdj ghdj);
 }

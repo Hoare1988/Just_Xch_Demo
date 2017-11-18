@@ -10,14 +10,13 @@
           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="org.just.*.mongo">
+	<context:component-scan base-package="org.just.xch.stdxch.mongo">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.context.annotation.Configuration" />
 	</context:component-scan>
 	<context:annotation-config />
-
+	
 	<mongo:repositories base-package="org.just.xch.stdxch.mongo.dao" />
-	<context:component-scan base-package="org.just.xch.stdxch.mongo.service" />
 
 	<!-- 获取配置文件属性 -->
 	<bean id="placeholderConfig"
@@ -29,7 +28,7 @@
 
 	<!-- 连接池配置详细查看https://docs.spring.io/spring-data/data-mongo/docs/2.0.0.RELEASE/reference/html/#query-by-example.matchers-->
 	<mongo:mongo-client id="mongoClient"
-		replica-set="localhost:27020">
+		replica-set="${replica-set}">
 		<mongo:client-options connect-timeout="${mongo.connectTimeout}"
 			socket-timeout="${mongo.socketTimeout}" heartbeat-frequency="${mongo.heartbeatFrequency}" />
 	</mongo:mongo-client>
