@@ -1,13 +1,13 @@
 package org.just.xch.stdxch.pattern.observer.demo1;
+
 /**
  * 
  *
- *Subject.java 文件使用说明
- * 说明：XXXX<br/>
- *  
+ * Subject.java 文件使用说明 说明：XXXX<br/>
+ * 
  * 公开方法：
  * <ul>
- * 		<li>XXXX：</li>
+ * <li>notifyObserver：</li>
  * </ul>
  *
  * @version ver 4.0.0
@@ -17,14 +17,13 @@ package org.just.xch.stdxch.pattern.observer.demo1;
  */
 public interface Subject {
 
-	void addObserver(Observer obj);
-	
-	void removeObserver(Observer obj);
-	
-	/**
-	 * 主题改变，通知所有观察者
-	 */
-	void notifyObserver();
-	
-	
+    void addObserver(Observer obj);
+
+    void removeObserver(Observer obj);
+
+    /**
+     * 主题改变，通知所有观察者
+     */
+    void notifyObserver();
+
 }

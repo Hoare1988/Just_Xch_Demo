@@ -25,8 +25,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@ComponentScan
+// @Configuration
+// @ComponentScan
 @EnableAutoConfiguration
 public class Application  {
 
@@ -37,5 +37,6 @@ public class Application  {
         set.add("classpath:applicationContext.xml");
         app.setSources(set);
         app.run(args);
+        
     }
 }

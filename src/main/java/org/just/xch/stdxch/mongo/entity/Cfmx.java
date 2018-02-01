@@ -2,18 +2,20 @@ package org.just.xch.stdxch.mongo.entity;
 
 import java.util.Date;
 
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+@Document(collection = "CK10_CFMX")
 public class Cfmx {
     
-    @Field
+    @Field("xmdm")
     private String xmdm;
-    @Field
+    @Field("xmmc")
     private String xmmc;
-    @Field
-    private String yyxmdm;
-    @Field
-    private String yyxmmc;
+//    @Field("yyxmdm")
+//    private String yyxmdm;
+//    @Field
+//    private String yyxmmc;
     @Field
     private String xmlb;// 项目类别
     @Field
@@ -97,18 +99,18 @@ public class Cfmx {
     public void setXmmc(String xmmc) {
         this.xmmc = xmmc;
     }
-    public String getYyxmdm() {
-        return yyxmdm;
-    }
-    public void setYyxmdm(String yyxmdm) {
-        this.yyxmdm = yyxmdm;
-    }
-    public String getYyxmmc() {
-        return yyxmmc;
-    }
-    public void setYyxmmc(String yyxmmc) {
-        this.yyxmmc = yyxmmc;
-    }
+//    public String getYyxmdm() {
+//        return yyxmdm;
+//    }
+//    public void setYyxmdm(String yyxmdm) {
+//        this.yyxmdm = yyxmdm;
+//    }
+//    public String getYyxmmc() {
+//        return yyxmmc;
+//    }
+//    public void setYyxmmc(String yyxmmc) {
+//        this.yyxmmc = yyxmmc;
+//    }
     public String getXmlb() {
         return xmlb;
     }
@@ -313,7 +315,5 @@ public class Cfmx {
     public void setXgd(String xgd) {
         this.xgd = xgd;
     }
-    
-    
 
 }

@@ -1,7 +1,5 @@
 package org.just.xch.stdxch.mongo.service;
 
-import java.util.List;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.just.xch.stdxch.BaseTest;
@@ -17,7 +15,12 @@ public class MonitorServiceTest extends BaseTest {
     @Test
     public void findByGhdjID_001(){
         
-        List<Ghdj> ajList=monitorService.findByGhdjID("2017092801010");
-        Assert.assertNotNull(ajList);
+        Ghdj ghdj=new Ghdj();
+        ghdj.setId("20170111301010");
+        ghdj.setRyzddm("J10.135X");
+        
+         monitorService.saveGhdj(ghdj);
+       Ghdj ghdj_EN =  monitorService.findByGhdjID("20170111301010");
+        Assert.assertNotNull(ghdj_EN);
     }
 }

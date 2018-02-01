@@ -27,5 +27,20 @@ public class MainTest {
 		
 		
 		teacher.setHomeWork("背诵古诗");
+		
+		Class class1=MainTest.class;
+		
+		try {
+            Object object=class1.newInstance();
+            
+        } catch (InstantiationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+		
+		
 	}
 }

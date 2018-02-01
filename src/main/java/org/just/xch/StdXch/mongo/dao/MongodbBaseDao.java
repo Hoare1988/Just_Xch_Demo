@@ -3,14 +3,24 @@ package org.just.xch.stdxch.mongo.dao;
 import java.util.List;
 
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
+
+import com.mongodb.WriteResult;
 
 public abstract  class MongodbBaseDao<T> {
 	 /** 
      * spring mongodb　集成操作类　 
      */  
     protected MongoTemplate mongoTemplate;  
+    
+    /** 
+     * 获取需要操作的实体类class 
+     *  
+     * @return 
+     */  
+    protected abstract Class<T> getEntityClass();  
   
     /** 
      * 通过条件查询实体(集合) 
@@ -68,9 +78,13 @@ public abstract  class MongodbBaseDao<T> {
      * @param update 
      * @return 
      */  
-    public void updateFirst(Query query, Update update) {  
-        mongoTemplate.updateFirst(query, update, this.getEntityClass());  
-    }  
+    public void updateFirst(Query query, Update update) { 
+        Document doc= this.getEntityClass().getAnnotation(Document.class);
+        mongoTemplate.updateFirst(query, update,doc.collection()); 
+    } 
+    
+    
+    
   
     /** 
      * 保存一个对象到mongodb 
@@ -79,8 +93,18 @@ public abstract  class MongodbBaseDao<T> {
      * @return 
      */  
     public T save(T bean) {  
-        mongoTemplate.save(bean, this.getEntityClass().getSimpleName());  
+        mongoTemplate.save(bean);  
         return bean;  
+    }  
+    
+    
+    /** 
+     * 保存一个对象到mongodb 
+     *  
+     * @param bean 
+     * @return 
+     */  
+    public void saveOrUpdate(Query query, Update update) {  
     }  
   
     /** 
@@ -104,13 +128,6 @@ public abstract  class MongodbBaseDao<T> {
     public T findById(String id, String collectionName) {  
         return mongoTemplate.findById(id, this.getEntityClass(), collectionName);  
     }  
-  
-    /** 
-     * 获取需要操作的实体类class 
-     *  
-     * @return 
-     */  
-    protected abstract Class<T> getEntityClass();  
   
       
   

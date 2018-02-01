@@ -24,7 +24,7 @@ public class MonitorServiceImpl implements IMonitorService {
     @Override
     public List<Ghdj> findManGhdj() {
         Map<String,Object> condit=new HashMap<>();
-        condit.put("hzxb", "1");
+       // condit.put("hzxb", "1");
         return monitorDao.findByCondits(condit);
     }
 

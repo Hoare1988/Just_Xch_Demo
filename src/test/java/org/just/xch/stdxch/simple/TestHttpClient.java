@@ -19,10 +19,10 @@ public class TestHttpClient {
     public static void testHttpClient(){
 
         HttpClient httpClient = new HttpClient();
-        PostMethod postMethod = new PostMethod("http://192.168.0.104:8085/MMAP/auth/login.do");
+        PostMethod postMethod = new PostMethod("http://localhost:8085/MMAP/doctor/WhiteList.do");
 
-        StringPart stringPart = new StringPart("userNm", "123");
-        StringPart stringPart2 = new StringPart("password", "123");
+        StringPart stringPart = new StringPart("pageSize", "10");
+        StringPart stringPart2 = new StringPart("pageIndex", "1");
         stringPart.setCharSet("UTF-8");
         // 中文要用这个
         Part[] pars = new Part[] { stringPart,stringPart2 };
@@ -35,10 +35,8 @@ public class TestHttpClient {
             int code = httpClient.executeMethod(postMethod);
             System.out.println("返回值"+postMethod.getResponseBodyAsString());
         } catch (HttpException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

@@ -15,10 +15,10 @@ public class Student implements Observer {
 	}
 	
 	@Override
-	public void update(Observable o, Object arg) {
-		this.teacher= o;
+	public void update(Observable teacher, Object arg) {
+		this.teacher= teacher;
 		
-		String info=((TeacherSubject)teacher).getInfo();
+		String info=((TeacherSubject)this.teacher).getInfo();
 		
 		System.out.println(name+":拿到老师的作业了，，，"+info);
 	}

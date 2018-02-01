@@ -1,12 +1,17 @@
 package org.just.xch.stdxch.mongo.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "ck10_ghdj")
-public class Ghdj {
+@Document(collection = "CK10_GHDJ")
+public class Ghdj implements Serializable {
+    /** 
+    * @Fields serialVersionUID : 
+    */ 
+    private static final long serialVersionUID = 8148899826088280541L;
 
     @Field("_id")
     private Object _id;
