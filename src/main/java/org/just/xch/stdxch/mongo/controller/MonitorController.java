@@ -5,6 +5,7 @@ import java.util.List;
 import org.just.xch.stdxch.mongo.entity.Ghdj;
 import org.just.xch.stdxch.mongo.service.impl.TransCData;
 import org.just.xch.stdxch.mongo.service.intf.IMonitorService;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,7 @@ import com.wordnik.swagger.annotations.ApiOperation;
 
 @Controller
 @RequestMapping("/monitor/*")
-public class MonitorController {
+public class MonitorController implements InitializingBean {
 
     @Autowired
     IMonitorService monitorService;
@@ -43,4 +44,17 @@ public class MonitorController {
         return ;
     }
 
+
+
+    //可以进行静态检查
+	@Override
+	public void afterPropertiesSet() throws Exception
+	{
+		if(transCData == null){
+			throw new Exception("静态检查出现错误");
+		}
+	}
+
+    
+    
 }
